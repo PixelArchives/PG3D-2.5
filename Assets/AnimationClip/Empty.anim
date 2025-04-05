@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Empty
+  m_AnimationType: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.06162879, y: -0.061627857, z: -0.70441604, w: 0.70441604}
+        inSlope: {x: -0.18819532, y: -0.18819538, z: 0.01386526, w: -0.013864366}
+        outSlope: {x: -0.18819532, y: -0.18819538, z: 0.01386526, w: -0.013864366}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: -0.062096402, y: -0.06209547, z: -0.70438236, w: 0.70438236}
+        inSlope: {x: -0.094476655, y: -0.09447671, z: 0.0064909286, w: -0.0064900345}
+        outSlope: {x: -0.094476655, y: -0.09447671, z: 0.0064909286, w: -0.0064900345}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.76604474, y: -4.832497E-07, z: -0.64278734, w: 1.3782866E-07}
+        inSlope: {x: -1.847744E-06, y: 8.940697E-08, z: -2.592802E-06, w: 4.3213367E-07}
+        outSlope: {x: -1.847744E-06, y: 8.940697E-08, z: -2.592802E-06, w: 4.3213367E-07}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: 0.76581156, y: -0.00021955006, z: -0.643066, w: 0.00021920833}
+        inSlope: {x: -0.13739759, y: -0.12722161, z: -0.1639335, w: 0.12722328}
+        outSlope: {x: -0.13739759, y: -0.12722161, z: -0.1639335, w: 0.12722328}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player/Gun1_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player/Gun1_1/Gun1_2
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.041041944, y: -0.08310974, z: -0.41994154}
+        inSlope: {x: 1.1102241E-15, y: -4.7581033E-16, z: -1.9032413E-15}
+        outSlope: {x: 4.7580863E-16, y: -1.1102201E-15, z: -4.4408802E-15}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: 0.041041948, y: -0.083109744, z: -0.41994154}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.015473041, y: 0.104472876, z: -0.36227813}
+        inSlope: {x: 5.947629E-17, y: 1.427431E-15, z: -9.833413E-15}
+        outSlope: {x: 1.3877751E-16, y: 3.3306604E-15, z: -6.0269096E-15}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: 0.015473041, y: 0.104472876, z: -0.36227813}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player/Gun1_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.015265729, y: -1.3974771E-07, z: 0.059982788}
+        inSlope: {x: 2.9220166E-05, y: -6.563327E-11, z: -5.9264113E-07}
+        outSlope: {x: -2.5563751E-05, y: 5.856498E-11, z: -5.994508E-07}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: -0.015460596, y: -1.393005E-07, z: 0.059982788}
+        inSlope: {x: -0.115569465, y: 2.652374E-07, z: -4.4703367E-07}
+        outSlope: {x: -0.115569465, y: 2.652374E-07, z: -4.4703367E-07}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player/Gun1_1/Gun1_2
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -1.5875, y: -1.5875, z: -1.5875}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: -1.5875, y: -1.5875, z: -1.5875}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -1.2922679, y: -1.2922679, z: -1.2922679}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: -1.2922679, y: -1.2922679, z: -1.2922679}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player/Gun1_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.003333211
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: player/Gun1_1/Gun1_2
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 2
+  m_Bounds:
+    m_Center: {x: 0, y: 0.070480466, z: -0.051823318}
+    m_Extent: {x: 0.1660428, y: 0.2983973, z: 0.5129253}
+  m_MuscleClipInfo:
+    m_StartTime: 0
+    m_StopTime: 0
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 0
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+    m_KeepAdditionalBonesAnimation: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

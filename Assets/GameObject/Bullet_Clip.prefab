@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1088532562605938
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4075491131261825}
+  - 111: {fileID: 111490674973834883}
+  - 114: {fileID: 114344946660822363}
+  m_Layer: 0
+  m_Name: Bullet_Clip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1052195231620065
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4479906767843493}
+  - 33: {fileID: 33413760303789561}
+  - 23: {fileID: 23200308016607302}
+  m_Layer: 0
+  m_Name: Clip 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4075491131261825
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088532562605938}
+  m_LocalRotation: {x: 1.110223E-16, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.4490547, y: 0.24675392, z: 3.4164429}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4479906767843493}
+  m_Father: {fileID: 0}
+--- !u!111 &111490674973834883
+Animation:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088532562605938}
+  m_Enabled: 1
+  m_Animation: {fileID: 7400000, guid: b38b49c338e1dbb4ca8857e45717ec55, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b38b49c338e1dbb4ca8857e45717ec55, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 5.9604645E-08, y: -2.9802322E-08, z: 0}
+    m_Extent: {x: 0.44240463, y: 0.24675389, z: 0.44241226}
+--- !u!114 &114344946660822363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088532562605938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586e5663b086e9d0360e8f5b9fb8e04f, type: 3}
+  m_Name:
+  AmmoItemUp: {fileID: 8300000, guid: 8e6b0a5702dfc0743815b1e5bffc52fe, type: 3}
+--- !u!4 &4479906767843493
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052195231620065}
+  m_LocalRotation: {x: 8.5265625E-29, y: 5.6468865E-22, z: -1.5099583E-07, w: 1}
+  m_LocalPosition: {x: 4.7683715E-09, y: -0.006753826, z: -1.9073486E-08}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 4075491131261825}
+--- !u!33 &33413760303789561
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052195231620065}
+  m_Mesh: {fileID: 4300000, guid: ce1f9808ffc12834ab4ede6e05c96f9d, type: 2}
+--- !u!23 &23200308016607302
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052195231620065}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 5220d5d45e23ed04b9bf56ccd7d0a7fa, type: 2}
+  - {fileID: 2100000, guid: 7e595e0f500774941b0c220eb76b0244, type: 2}
+  - {fileID: 2100000, guid: 780f5f0cda9269a47906311a1c9b948e, type: 2}
+  m_SubsetIndices:
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1088532562605938}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

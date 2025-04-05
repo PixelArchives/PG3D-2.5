@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: raven_wing2
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 108
+    topology: 0
+    firstVertex: 0
+    vertexCount: 71
+    localAABB:
+      m_Center: {x: 0.30193624, y: -2.6077032E-08, z: 0.0033645704}
+      m_Extent: {x: 0.30022505, y: 0.05000008, z: 0.15022466}
+  m_MeshCompression: 3
+  m_StreamCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer:
+  m_Skin: []
+  m_BindPose: []
+  m_VertexData:
+    m_CurrentChannels: 0
+    m_VertexCount: 0
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_Streams:
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    m_DataSize: 0
+    _typelessdata:
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 213
+      m_Range: 0.7482892
+      m_Start: -0.14686008
+      m_Data: 6432140b990c01a00c43002cc3906665329419990cc5522c431229430800641202009984c4b20c219a954948660f3374c0db849cf1302107bccdd019641212cbc30c1df030210790c9502cc53224d1db849cf1364367144b8844653294d9ff0c45542c4312fdcf9066ca300400998400a00c210090c91000c51222d1c3841cf03621679049482ccb30a499328400b00c219a29c31000653294d9328468562621992dc390666432140b998400402643009049482c643214cbdb0c9df130430714cb9044ff3314d1ff8468f63f2111fdcf9066c51222d1ff0c45f43f211115cb9044ff33a459998464f63f219a95c95066651292d9ff8444f43f219a154b8844651292199984c4522c211201
+      m_BitSize: 10
+    m_UV:
+      m_NumItems: 142
+      m_Range: 1
+      m_Start: 0
+      m_Data: 90ffffffff00000000ffff00ffffffffff00900000ff0000ff0000ffffff000095ff000000ff95006900ffffff0069ff0000ffffff3c00ffff0000ffffff00000095ff000000ff95ff0000ffffff0000ff0000ffffff00009000ffffff0090ffff6900ffffff0069ff0000ffffff0000c2ff000000ffc200ff0000ffffff000000ffff000000ffc2ff0000ffffff
+      m_BitSize: 8
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 142
+      m_Range: 1.999748
+      m_Start: -0.999874
+      m_Data: dffffddffffddffffddfff011ff0011ff001b5577bb5577b888778888778b5577bb5577bdffffddffffd9ee7799ee7791ff0011ff001c0077cc0077c9ee7799ee779bee77bbee77bdffffddffffdbee77bbee77b9ee7799ee7799ee7799ee7791ff0011ff0011ff0011f00
+      m_BitSize: 6
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 71
+      m_Data: 0000f000000f00f000
+      m_BitSize: 1
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 108
+      m_Data: 80804030000c088002c1704024128a4362a160341c8c470312914026114ac542b95430190d6693e1743c9c4f07141281462152c9443a955029156a9562b55cac570b1693c166315acd46bbd570391d6e97e3f57cbc5f0f181402874162d108
+      m_BitSize: 7
+    m_Colors:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: 0.30193624, y: -2.6077032E-08, z: 0.0033645704}
+    m_Extent: {x: 0.30022505, y: 0.05000008, z: 0.15022466}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 1
