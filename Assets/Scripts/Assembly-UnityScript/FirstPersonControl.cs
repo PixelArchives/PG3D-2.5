@@ -94,16 +94,24 @@ public class FirstPersonControl : MonoBehaviour
 
 	public virtual void Update()
 	{
-#if !UNITY_STANDALONE && !UNITY_EDITOR
-		Vector3 motion = thisTransform.TransformDirection(new Vector3(moveTouchPad.position.x, 0f, moveTouchPad.position.y));
-		Vector2 vector = new Vector2(Mathf.Abs(moveTouchPad.position.x), Mathf.Abs(moveTouchPad.position.y));
-		Vector2 vector2 = Vector2.zero;
-#else
-        Vector3 motion = thisTransform.TransformDirection(NewInput.movement);
-		Vector2 vector = NewInput.movementAbs;
-        Vector2 vector2 = NewInput.mouseDelta;
-		if (NewInput.jump) rotateTouchPad.jumpPressed = true;
-#endif
+		Vector3 motion;
+		Vector2 vector;
+		Vector2 vector2;
+
+		if (NewInput.isMobile)
+		{
+			motion = thisTransform.TransformDirection(new Vector3(moveTouchPad.position.x, 0f, moveTouchPad.position.y));
+			vector = new Vector2(Mathf.Abs(moveTouchPad.position.x), Mathf.Abs(moveTouchPad.position.y));
+			vector2 = Vector2.zero;
+		}
+		else
+		{
+			motion = thisTransform.TransformDirection(NewInput.movement);
+			vector = NewInput.movementAbs;
+			vector2 = NewInput.mouseDelta;
+			if (NewInput.jump) rotateTouchPad.jumpPressed = true;
+		}
+
         motion.y = 0f;
 		motion.Normalize();
 		if (!(vector.y <= vector.x))
@@ -168,36 +176,37 @@ public class FirstPersonControl : MonoBehaviour
 		{
 			return;
 		}
-#if !UNITY_STANDALONE
-		if ((bool)rotateTouchPad)
+		if (NewInput.isMobile)
 		{
-			vector2 = rotateTouchPad.position;
-		}
-		else
-		{
-			Vector3 acceleration = Input.acceleration;
-			float num = Mathf.Abs(acceleration.x);
-			if (!(acceleration.z >= 0f) && !(acceleration.x >= 0f))
+			if ((bool)rotateTouchPad)
 			{
-				if (!(num < tiltPositiveYAxis))
+				vector2 = rotateTouchPad.position;
+			}
+			else
+			{
+				Vector3 acceleration = Input.acceleration;
+				float num = Mathf.Abs(acceleration.x);
+				if (!(acceleration.z >= 0f) && !(acceleration.x >= 0f))
 				{
-					vector2.y = (num - tiltPositiveYAxis) / (1f - tiltPositiveYAxis);
+					if (!(num < tiltPositiveYAxis))
+					{
+						vector2.y = (num - tiltPositiveYAxis) / (1f - tiltPositiveYAxis);
+					}
+					else if (!(num > tiltNegativeYAxis))
+					{
+						vector2.y = (0f - (tiltNegativeYAxis - num)) / tiltNegativeYAxis;
+					}
 				}
-				else if (!(num > tiltNegativeYAxis))
+				if (!(Mathf.Abs(acceleration.y) < tiltXAxisMinimum))
 				{
-					vector2.y = (0f - (tiltNegativeYAxis - num)) / tiltNegativeYAxis;
+					vector2.x = (0f - (acceleration.y - tiltXAxisMinimum)) / (1f - tiltXAxisMinimum);
 				}
 			}
-			if (!(Mathf.Abs(acceleration.y) < tiltXAxisMinimum))
+			if (!(vector2.magnitude <= 1f))
 			{
-				vector2.x = (0f - (acceleration.y - tiltXAxisMinimum)) / (1f - tiltXAxisMinimum);
 			}
+			vector2 *= Time.deltaTime * 10f;
 		}
-		if (!(vector2.magnitude <= 1f))
-		{
-		}
-		vector2 *= Time.deltaTime * 10f;
-#endif
         thisTransform.Rotate(0f, vector2.x, 0f, Space.World);
 		cameraPivot.Rotate(0f - vector2.y, 0f, 0f);
 	}

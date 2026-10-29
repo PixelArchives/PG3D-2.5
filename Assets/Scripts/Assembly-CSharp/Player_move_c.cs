@@ -169,9 +169,8 @@ public class Player_move_c : MonoBehaviour
 
 	private void Start()
 	{
-#if UNITY_STANDALONE || UNITY_EDITOR
         NewInput.mouseLocked = true;
-#endif
+
 		weapons[CurrentWeaponIndex].GetComponent<Animation>()["Reload"].layer = 1;
 		weapons[CurrentWeaponIndex].GetComponent<Animation>().Stop();
 		CurAmmoCount = MaxAmmoCount;
@@ -268,7 +267,6 @@ public class Player_move_c : MonoBehaviour
 
 	private void Update()
 	{
-#if UNITY_STANDALONE || UNITY_EDITOR
         if (NewInput.pause) SetPause();
 
         if (NewInput.mouseLocked)
@@ -276,7 +274,7 @@ public class Player_move_c : MonoBehaviour
             if (NewInput.reload) ReloadPressed();
             if (NewInput.Shooting(CurAmmoCount)) ShotPressed();
         }
-#endif
+
 		if (GunFlashLifetime > 0f)
 		{
 			GunFlashLifetime -= Time.deltaTime;
@@ -334,8 +332,7 @@ public class Player_move_c : MonoBehaviour
 				_backWasPressed = false;
 			}
 		}
-#if !UNITY_STANDALONE
-		if ((GUI.Button(new Rect(0f, (float)Screen.height * 0.078f, (float)Screen.height * 0.078f, (float)Screen.height * 0.078f), string.Empty, pauseStyle) || (flag2 && !_pauser.paused)) && !_pauser.paused)
+		if (NewInput.isMobile && (GUI.Button(new Rect(0f, (float)Screen.height * 0.078f, (float)Screen.height * 0.078f, (float)Screen.height * 0.078f), string.Empty, pauseStyle) || (flag2 && !_pauser.paused)) && !_pauser.paused)
 		{
 			flag2 = false;
 			if (CurHealth > 0)
@@ -343,7 +340,6 @@ public class Player_move_c : MonoBehaviour
 				SetPause();
 			}
 		}
-#endif
 		int num4 = GlobalGameController.EnemiesToKill - _zombieCreator.NumOfDeadZombies;
 		string text = ((num4 <= 0) ? "Enter the Portal..." : ("Enemies left: " + num4));
 		enemiesLeftStyle.fontSize = Mathf.RoundToInt((float)Screen.height * 0.035f);
@@ -367,9 +363,7 @@ public class Player_move_c : MonoBehaviour
 			float num6 = 15f;
 			bool @bool = PlayerPrefsX.GetBool(PlayerPrefsX.SndSetting, true);
 			@bool = GUI.Toggle(new Rect((float)Screen.width * 0.05f, (float)Screen.height * 0.923f - (float)Screen.height * 0.0525f, (float)Screen.height * 0.105f, (float)Screen.height * 0.105f), @bool, string.Empty, soundStyle);
-			AudioListener.volume = (@bool ? 1 : 0);
-			PlayerPrefsX.SetBool(PlayerPrefsX.SndSetting, @bool);
-			PlayerPrefs.Save();
+			NewUtils.enableAudio = @bool;
 		}
 	}
 

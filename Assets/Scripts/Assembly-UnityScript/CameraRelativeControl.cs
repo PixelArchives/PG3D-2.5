@@ -69,17 +69,24 @@ public class CameraRelativeControl : MonoBehaviour
 	// Bro i coded it but it isnt even used :sob:
 	public virtual void Update()
 	{
-#if !UNITY_STANDALONE
-		Vector3 motion = cameraTransform.TransformDirection(new Vector3(moveJoystick.position.x, 0f, moveJoystick.position.y));
-		Vector2 vector = new Vector2(Mathf.Abs(moveJoystick.position.x), Mathf.Abs(moveJoystick.position.y));
-		Vector2 position = rotateJoystick.position;
-#else
-        Vector3 motion = cameraTransform.TransformDirection(new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")));
-        Vector2 vector = new Vector2(Mathf.Abs(Input.GetAxisRaw("Horizontal")), Mathf.Abs(Input.GetAxisRaw("Vertical")));
-		Vector2 position = NewInput.mouseDelta;
-#endif
-        // 'vector' was inited here
-        motion.y = 0f;
+		Vector3 motion;
+		Vector2 vector;
+		Vector2 position;
+
+		if (NewInput.isMobile)
+		{
+			motion = cameraTransform.TransformDirection(new Vector3(moveJoystick.position.x, 0f, moveJoystick.position.y));
+			vector = new Vector2(Mathf.Abs(moveJoystick.position.x), Mathf.Abs(moveJoystick.position.y));
+			position = rotateJoystick.position;
+		}
+		else
+		{
+			motion = cameraTransform.TransformDirection(new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")));
+			vector = new Vector2(Mathf.Abs(Input.GetAxisRaw("Horizontal")), Mathf.Abs(Input.GetAxisRaw("Vertical")));
+			position = NewInput.mouseDelta;
+		}
+		// 'vector' was inited here
+		motion.y = 0f;
 		motion.Normalize();
 		motion *= speed * ((vector.x <= vector.y) ? vector.y : vector.x);
 		if (character.isGrounded)

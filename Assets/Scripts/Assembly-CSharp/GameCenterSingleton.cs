@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.SocialPlatforms.GameCenter;
+//using UnityEngine.SocialPlatforms;
+//using UnityEngine.SocialPlatforms.GameCenter;
 
 public class GameCenterSingleton
 {
@@ -10,7 +10,7 @@ public class GameCenterSingleton
 
 	public string bestScore = "0";
 
-	private IAchievement[] achievements;
+	//private IAchievement[] achievements;
 
 	public static GameCenterSingleton Instance
 	{
@@ -59,7 +59,7 @@ public class GameCenterSingleton
 		}
 	}
 
-	public bool AddAchievementProgress(string achievementID, float percentageToAdd)
+	/*public bool AddAchievementProgress(string achievementID, float percentageToAdd)
 	{
 		IAchievement achievement = GetAchievement(achievementID);
 		if (achievement != null)
@@ -76,11 +76,11 @@ public class GameCenterSingleton
 		{
 			Debug.Log((!success) ? "Failed to report score" : "Reported score successfully");
 		});
-	}
+	}*/
 
 	public void GetScore()
 	{
-		Social.LoadScores(_leaderboardID, delegate(IScore[] scores)
+		/*Social.LoadScores(_leaderboardID, delegate(IScore[] scores)
 		{
 			if (scores.Length > 0)
 			{
@@ -99,7 +99,7 @@ public class GameCenterSingleton
 				Debug.Log("No scores loaded");
 			}
 			bestScore = "0";
-		});
+		});*/
 	}
 
 	public bool ReportAchievementProgress(string achievementID, float progressCompleted)
@@ -133,12 +133,12 @@ public class GameCenterSingleton
 
 	public void ResetAchievements()
 	{
-		GameCenterPlatform.ResetAllAchievements(ResetAchievementsHandler);
+		//GameCenterPlatform.ResetAllAchievements(ResetAchievementsHandler);
 	}
 
 	private void LoadAchievements()
 	{
-		Social.LoadAchievements(ProcessLoadedAchievements);
+		//Social.LoadAchievements(ProcessLoadedAchievements);
 	}
 
 	private void ProcessAuthentication(bool success)
@@ -154,7 +154,7 @@ public class GameCenterSingleton
 		}
 	}
 
-	private void ProcessLoadedAchievements(IAchievement[] achievements)
+	/*private void ProcessLoadedAchievements(IAchievement[] achievements)
 	{
 		if (this.achievements != null)
 		{
@@ -167,11 +167,11 @@ public class GameCenterSingleton
 		}
 		Debug.Log("Got " + achievements.Length + " achievements");
 		this.achievements = achievements;
-	}
+	}*/
 
 	private bool IsAchievementComplete(string achievementID)
 	{
-		if (achievements != null)
+		/*if (achievements != null)
 		{
 			IAchievement[] array = achievements;
 			foreach (IAchievement achievement in array)
@@ -181,11 +181,11 @@ public class GameCenterSingleton
 					return true;
 				}
 			}
-		}
+		}*/
 		return false;
 	}
 
-	private IAchievement GetAchievement(string achievementID)
+	/*private IAchievement GetAchievement(string achievementID)
 	{
 		if (achievements != null)
 		{
@@ -216,7 +216,7 @@ public class GameCenterSingleton
 		{
 			Debug.Log("Achievements reset failure!");
 		}
-	}
+	}*/
 
 	public void updateGameCenter()
 	{

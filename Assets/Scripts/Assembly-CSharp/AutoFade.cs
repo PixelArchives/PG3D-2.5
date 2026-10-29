@@ -37,7 +37,7 @@ public class AutoFade : MonoBehaviour
 	{
 		Object.DontDestroyOnLoad(this);
 		m_Instance = this;
-		m_Material = new Material(Shader.Find("overmet15/AutoFade"));
+		m_Material = Resources.Load<Material>("AutoFade");
 	}
 
 	private void DrawQuad(Color aColor, float aAlpha)

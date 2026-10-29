@@ -134,6 +134,16 @@ public class Joystick : MonoBehaviour
 		NormalReloadMode = true;
 	}
 
+	private void NewInput_onInputChange()
+	{
+		GetComponent<GUITexture>().enabled = NewInput.isMobile;
+	}
+
+	private void OnDestroy()
+	{
+		NewInput.onInputChange -= NewInput_onInputChange;
+	}
+
 	public virtual void NoAmmo()
 	{
 		if (NormalReloadMode)
@@ -160,6 +170,9 @@ public class Joystick : MonoBehaviour
 
 	public virtual void Start()
 	{
+		NewInput.onInputChange += NewInput_onInputChange;
+		NewInput_onInputChange();
+
 		gui = (GUITexture)GetComponent(typeof(GUITexture));
 		gui.pixelInset = new Rect(gui.pixelInset.x * (float)Screen.height / 640f, gui.pixelInset.y * (float)Screen.height / 640f, gui.pixelInset.width * (float)Screen.height / 640f, gui.pixelInset.height * (float)Screen.height / 640f);
 		defaultRect = gui.pixelInset;
@@ -217,10 +230,6 @@ public class Joystick : MonoBehaviour
 			guiBoundary.max.y = defaultRect.y + guiTouchOffset.y;
 		}
 		_playerGun = GameObject.FindGameObjectWithTag("PlayerGun");
-
-#if UNITY_STANDALONE || UNITY_EDITOR
-		GetComponent<GUITexture>().enabled = false;
-#endif
 	}
 
     public virtual void Disable()
@@ -260,7 +269,6 @@ public class Joystick : MonoBehaviour
 
 	public virtual void Update()
 	{
-#if !UNITY_STANDALONE
 		if (!enumeratedJoysticks)
 		{
 			joysticks = ((Joystick[])UnityEngine.Object.FindObjectsOfType(typeof(Joystick))) as Joystick[];
@@ -414,12 +422,12 @@ public class Joystick : MonoBehaviour
 		{
 			position.y = Mathf.Sign(position.y) * (num10 - deadZone.y) / (1f - deadZone.y);
 		}
-#endif
 	}
 
 	public virtual void OnGUI()
 	{
-#if !UNITY_STANDALONE
+		if (!NewInput.isMobile) return;
+
 		if ((bool)fireTexture)
 		{
 			GUI.DrawTexture(new Rect(fireZone.x, (float)Screen.height - fireZone.height - fireZone.y, fireZone.width, fireZone.height), fireTexture);
@@ -428,7 +436,6 @@ public class Joystick : MonoBehaviour
 		{
 			GUI.DrawTexture(new Rect(reloadZone.x, (float)Screen.height - reloadZone.height - reloadZone.y, reloadTexture.width * Screen.height / 640, reloadTexture.height * Screen.height / 640), NormalReloadMode ? reloadTexture : ((!blink) ? reloadTexture : reloadTextureNoAmmo));
 		}
-#endif
 	}
 
 	public virtual void setSeriya(bool isSeriya)

@@ -2,28 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1045 &1
 EditorBuildSettings:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
+  serializedVersion: 2
   m_Scenes:
   - enabled: 1
     path: Assets/Loading.unity
+    guid: 6bfdbf3e9e7049d4faf9e34c914a4f4e
   - enabled: 1
     path: Assets/Restart.unity
-  - enabled: 1
-    path: Assets/Sourсe/Scenes/Level2.unity
+    guid: 30c188cbc73fcd249b4e0675b8253279
+  - enabled: 0
+    path: "Assets/Sour\u0441e/Scenes/Level2.unity"
+    guid: c6077000b289d764d9d2e9c901d55bb3
   - enabled: 1
     path: Assets/GameOver.unity
+    guid: bd0b266c22954c64391cccee603e0df6
   - enabled: 1
     path: Assets/LoadingNoWait.unity
+    guid: 5174796edd90384449b007c8d7df8879
   - enabled: 1
-    path: Assets/Sourсe/Scenes/Level2_maze.unity
+    path: "Assets/Sour\u0441e/Scenes/Level2_maze.unity"
+    guid: a4387b047bb79c8469321a6ee7954254
   - enabled: 1
-    path: Assets/Sourсe/Scenes/Level3_city.unity
+    path: "Assets/Sour\u0441e/Scenes/Level3_city.unity"
+    guid: 993d872cac541624090c95943353b2bd
   - enabled: 1
-    path: Assets/Sourсe/Scenes/level1_prison.unity
+    path: "Assets/Sour\u0441e/Scenes/level1_prison.unity"
+    guid: e446f65372d5a4e4c8231d6d339ae02b
   - enabled: 1
-    path: Assets/Sourсe/Scenes/level4.unity
+    path: "Assets/Sour\u0441e/Scenes/level4.unity"
+    guid: ef5926aeb5ff1c94c8c5e8e7439f1142
   - enabled: 1
-    path: Assets/Sourсe/Scenes/level6.unity
+    path: "Assets/Sour\u0441e/Scenes/level6.unity"
+    guid: 5b037966ac714cb48934d1c6b8e05f80
   - enabled: 1
-    path: Assets/Sourсe/Scenes/Level1_cementery.unity
+    path: "Assets/Sour\u0441e/Scenes/Level1_cementery.unity"
+    guid: 3a2d4276862e41f4594f9a930c44335a

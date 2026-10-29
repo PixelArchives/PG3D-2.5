@@ -55,9 +55,7 @@ public class MainMenu : MonoBehaviour
 		}
 		bool @bool = PlayerPrefsX.GetBool(PlayerPrefsX.SndSetting, true);
 		@bool = GUI.Toggle(new Rect((float)Screen.width * 0.05f, (float)Screen.height * 0.923f - (float)Screen.height * 0.0525f, (float)Screen.height * 0.105f, (float)Screen.height * 0.105f), @bool, string.Empty, soundStyle);
-		AudioListener.volume = (@bool ? 1 : 0);
-		PlayerPrefsX.SetBool(PlayerPrefsX.SndSetting, @bool);
-		PlayerPrefs.Save();
+		NewUtils.enableAudio = @bool;
 		bestScoreStyle.fontSize = Mathf.RoundToInt((float)Screen.height * 0.04f);
 		GUI.DrawTexture(new Rect((float)(Screen.width / 2) - (float)Screen.height * 0.317f, (float)Screen.height * 0.923f - (float)Screen.height * 0.0525f, (float)Screen.height * 0.63525f, (float)Screen.height * 0.105f), plashkaPodScore);
 		GUI.Label(new Rect((float)(Screen.width / 2) - (float)Screen.height * 0.272f, (float)Screen.height * 0.923f - (float)Screen.height * 0.045f, (float)Screen.height * 0.5445f, (float)Screen.height * 0.09f), "BEST SCORE " + PlayerPrefs.GetInt(Defs.BestScoreSett, 0), bestScoreStyle);
